@@ -36,11 +36,11 @@ public class ValidParentheses {
     }
 
     private static Map<Character, Character> getParentheses() {
-        Map<Character, Character> open2CloseParentheses = new HashMap<>();
-        open2CloseParentheses.put('(', ')');
-        open2CloseParentheses.put('[', ']');
-        open2CloseParentheses.put('{', '}');
-        return open2CloseParentheses;
+        Map<Character, Character> parentheses = new HashMap<>();
+        parentheses.put('(', ')');
+        parentheses.put('[', ']');
+        parentheses.put('{', '}');
+        return parentheses;
     }
 
 }
