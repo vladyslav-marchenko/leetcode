@@ -1,6 +1,5 @@
 package com.leetcode;
 
-import java.util.HashMap;
 import java.util.Map;
 import java.util.Stack;
 
@@ -36,11 +35,11 @@ public class ValidParentheses {
     }
 
     private static Map<Character, Character> getParentheses() {
-        Map<Character, Character> parentheses = new HashMap<>();
-        parentheses.put('(', ')');
-        parentheses.put('[', ']');
-        parentheses.put('{', '}');
-        return parentheses;
+        return Map.of(
+        '(', ')',
+        '[', ']',
+        '{', '}'
+        );
     }
 
 }
