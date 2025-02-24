@@ -10,9 +10,9 @@ public class LongestConsecutive {
         int[] a = {100,4,200,1,3,2};
         int[] b = {0, 1, 1, 2};
         int[] c = {0,3,7,2,5,8,4,6,0,1};
-        System.out.println(longestConsecutive(b));
-        System.out.println(longestConsecutive(c));
-        System.out.println(longestConsecutive(a));
+        System.out.println(longestConsecutive(b)); // 3
+        System.out.println(longestConsecutive(c)); // 9
+        System.out.println(longestConsecutive(a)); // 4
     }
 
     public static int longestConsecutive(int[] nums) {
