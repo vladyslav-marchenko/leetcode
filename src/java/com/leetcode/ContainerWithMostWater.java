@@ -28,7 +28,7 @@ public class ContainerWithMostWater {
                 j--;
             } else if (height[i] < height[j]) {
                 i++;
-            } else { // TODO: what if equal heights
+            } else {
                 i++; // TODO: think about it
             }
         }
