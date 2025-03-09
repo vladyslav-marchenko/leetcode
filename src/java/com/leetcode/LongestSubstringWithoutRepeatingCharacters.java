@@ -28,4 +28,26 @@ public class LongestSubstringWithoutRepeatingCharacters {
         return maxLength;
     }
 
+    public static int lengthOfLongestSubstringV2(String s) {
+        if (s == null || s.isEmpty()) {
+            return 0;
+        }
+        int result = 0;
+        Set<Character> substring = new HashSet<>();
+        for (int i = 0; i < s.length(); i++) {
+            substring.add(s.charAt(i));
+            for (int j = i; j < s.length(); j++) {
+                if (i == j) {
+                    continue;
+                }
+                if (!substring.add(s.charAt(j))) {
+                    result = Math.max(result, substring.size());
+                    substring.clear();
+                    break;
+                }
+            }
+        }
+        return Math.max(result, substring.size());
+    }
+
 }
