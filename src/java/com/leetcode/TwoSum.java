@@ -10,7 +10,11 @@ public class TwoSum {
         //int target = -8;
         int[] nums = new int[]{3, 4, 5, 2, 2, 2};
         int target = 6;
-        twoSum(nums, target);
+
+        int[] nums1 = {7,2,11,15};
+        int target1 = 9;
+        //twoSum(nums, target);
+        twoSum(nums1, target1);
     }
 
     public static int[] twoSum(int[] nums, int target) {
