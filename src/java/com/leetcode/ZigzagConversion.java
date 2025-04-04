@@ -36,4 +36,47 @@ public class ZigzagConversion {
         return result.toString();
     }
 
+    // P     I    N
+    // A   L S  I G
+    // Y A   H R
+    // P     I
+    public static String convertV2(String s, int numRows) {
+        if (numRows == 1) {
+            return s;
+        }
+        StringBuilder[] zigZag = new StringBuilder[numRows];
+        for (int i = 0; i < numRows; i++) {
+            zigZag[i] = new StringBuilder();
+        }
+
+        char[] chars = s.toCharArray();
+        int zigZagPutAt = 0;
+        boolean goDown = true;
+        for (char aChar : chars) {
+            zigZag[zigZagPutAt].append(aChar);
+            if (goDown) {
+                if (zigZagPutAt >= numRows - 1) {
+                    goDown = false;
+                    zigZagPutAt--;
+                } else {
+                    zigZagPutAt++;
+                }
+            } else {
+                if (zigZagPutAt == 0) {
+                    goDown = true;
+                    zigZagPutAt++;
+                } else {
+                    zigZagPutAt--;
+                }
+            }
+        }
+
+        StringBuilder result = new StringBuilder();
+        for (StringBuilder sb : zigZag) {
+            result.append(sb);
+        }
+        return result.toString();
+    }
+
+
 }
